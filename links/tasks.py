@@ -38,7 +38,7 @@ thread_count = 0
 def my_processes(link):
     global thread_count
     try:
-        if link.linkdetail.lazy < 10:
+        if link.linkdetail.lazy < 20:
 
             # print("Currently Checking:", link.link)
 
