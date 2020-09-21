@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'links.apps.LinksConfig',
-    'background_task',
+    # 'background_task',
 ]
 
 MIDDLEWARE = [
