@@ -79,7 +79,7 @@ def my_task():
 
             section = get_section(link.link)
 
-            if section != link.linkdetail.section:
+            if section != "" and section != link.linkdetail.section:
                 msg = f"Change detected: {link.link}"
                 link.linkdetail.section = section
                 # link.linkdetail.lazy = 0
