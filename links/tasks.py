@@ -1,5 +1,5 @@
 import threading
-from background_task import background
+# from background_task import background
 import requests
 from django.conf import settings
 from .models import Link
@@ -136,11 +136,12 @@ def queue_process():
 
 # @background
 def lazy_reset():
-    links = Link.objects.all()
-    for link in links:
-        link.linkdetail.lazy = 0
-        link.linkdetail.save()
-    time.sleep(600)
+    while True:
+        links = Link.objects.all()
+        for link in links:
+            link.linkdetail.lazy = 0
+            link.linkdetail.save()
+        time.sleep(600)
 
 
 th = threading.Thread(target=my_task, daemon=True)
