@@ -1,4 +1,4 @@
-# from links.tasks import *
+from links.tasks import *
 from django.urls import path
 from . import views
 
