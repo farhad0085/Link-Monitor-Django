@@ -69,7 +69,7 @@ def my_task():
     while True:
         links = Link.objects.all()
 
-        print("Total links", len(links))
+        # print("Total links", len(links))
 
         for link in links:
 
@@ -92,7 +92,7 @@ def my_task():
             x = threading.Thread(target=my_processes,
                                  daemon=True, args=(link,))
             x.start()
-            time.sleep(0.5)
+            time.sleep(2)
 
         while True:
             if thread_count == 0:
