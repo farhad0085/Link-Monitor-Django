@@ -1,7 +1,8 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from .models import Link
 
-
+@login_required
 def upload(request):
     if request.method == "POST":
         file = request.FILES['file']
