@@ -92,7 +92,7 @@ def my_task():
             x = threading.Thread(target=my_processes,
                                  daemon=True, args=(link,))
             x.start()
-            time.sleep(2)
+            time.sleep(1)
 
         while True:
             if thread_count == 0:
