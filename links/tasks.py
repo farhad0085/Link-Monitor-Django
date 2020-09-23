@@ -146,8 +146,21 @@ def my_task():
 #             link.linkdetail.save()
 #         time.sleep(600)
 
+def visit_homepage():
+    """this will prvent the app from sleeping after 30 minutes"""
+    while True:
+        try:
+            print("server restarted")
+            requests.get('https://link-monitor.herokuapp.com/')
+        except:
+            pass
+
+        time.sleep(25)
 
 th = threading.Thread(target=my_task, daemon=True)
+th.start()
+
+th = threading.Thread(target=visit_homepage, daemon=True)
 th.start()
 
 # th = threading.Thread(target=queue_process, daemon=True)
