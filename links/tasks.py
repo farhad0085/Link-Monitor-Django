@@ -78,6 +78,7 @@ def my_task():
             print("Currently Checking:", link.link)
 
             section = get_section(link.link)
+            print(section)
 
             if section != "" and section != link.linkdetail.section:
                 msg = f"Change detected: {link.link}"
