@@ -87,6 +87,7 @@ def my_task():
                 send_message(msg)
                 print("message sent")
             else:
+                print("not changed")
                 link.linkdetail.lazy = link.linkdetail.lazy + 1
                 link.linkdetail.save()
         #     thread_count += 1
@@ -99,7 +100,7 @@ def my_task():
         #     if thread_count == 0:
         #         break
         #     time.sleep(1)
-        time.sleep(1)
+        # time.sleep(1)
 
 
 # @background
