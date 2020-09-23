@@ -84,6 +84,7 @@ def my_task():
                 link.linkdetail.section = section
                 # link.linkdetail.lazy = 0
                 link.linkdetail.save()
+                print("change saved in database")
                 send_message(msg)
                 print("message sent")
             else:
