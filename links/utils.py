@@ -31,6 +31,7 @@ def get_section(url):
     try:
         section = str(soup.find('section'))
     except:
+        print("no section found")
         section = ""
 
     return section

@@ -85,9 +85,10 @@ def my_task():
                 # link.linkdetail.lazy = 0
                 link.linkdetail.save()
                 send_message(msg)
-            # else:
-            #     link.linkdetail.lazy = link.linkdetail.lazy + 1
-            #     link.linkdetail.save()
+                print("message sent")
+            else:
+                link.linkdetail.lazy = link.linkdetail.lazy + 1
+                link.linkdetail.save()
         #     thread_count += 1
         #     x = threading.Thread(target=my_processes,
         #                          daemon=True, args=(link,))
