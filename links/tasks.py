@@ -101,7 +101,7 @@ def my_task():
         #     if thread_count == 0:
         #         break
         #     time.sleep(1)
-        # time.sleep(1)
+        time.sleep(1)
 
 
 # @background
