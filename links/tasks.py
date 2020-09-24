@@ -155,7 +155,7 @@ def visit_homepage():
         except:
             pass
 
-        time.sleep(25)
+        time.sleep(1500) # 25 minute
 
 th = threading.Thread(target=my_task, daemon=True)
 th.start()
