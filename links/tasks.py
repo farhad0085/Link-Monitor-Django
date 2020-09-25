@@ -176,7 +176,7 @@ def visit_homepage():
 
         try:
             print("server restarted")
-            requests.get('https://link-monitor.herokuapp.com/', headers=headers)
+            requests.get('https://link-monitor.herokuapp.com/upload/', headers=headers)
         except:
             pass
 
