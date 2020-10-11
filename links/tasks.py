@@ -147,46 +147,46 @@ def my_task():
 #             link.linkdetail.save()
 #         time.sleep(600)
 
-def visit_homepage():
-    """this will prvent the app from sleeping after 30 minutes"""
-    while True:
+# def visit_homepage():
+#     """this will prvent the app from sleeping after 30 minutes"""
+#     while True:
         
-        user_agents = [
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Safari/605.1.15",
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0",
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36",
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:77.0) Gecko/20100101 Firefox/77.0",
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36",
-        ]
+#         user_agents = [
+#             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
+#             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Safari/605.1.15",
+#             "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0",
+#             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36",
+#             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:77.0) Gecko/20100101 Firefox/77.0",
+#             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36",
+#         ]
 
-        user_agent = random.choice(user_agents)
+#         user_agent = random.choice(user_agents)
 
-        headers = {
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
-            "Accept-Encoding": "gzip, deflate", 
-            "Accept-Language": "en-GB,en-US, de-DE;q=0.9,en;q=0.8", 
-            "Dnt": "1",
-            "Upgrade-Insecure-Requests": "1", 
-            "User-Agent": user_agent
-        }
+#         headers = {
+#             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+#             "Accept-Encoding": "gzip, deflate", 
+#             "Accept-Language": "en-GB,en-US, de-DE;q=0.9,en;q=0.8", 
+#             "Dnt": "1",
+#             "Upgrade-Insecure-Requests": "1", 
+#             "User-Agent": user_agent
+#         }
 
         
 
 
-        try:
-            print("server restarted")
-            requests.get('https://link-monitor.herokuapp.com/upload/', headers=headers)
-        except:
-            pass
+#         try:
+#             print("server restarted")
+#             requests.get('https://link-monitor.herokuapp.com/upload/', headers=headers)
+#         except:
+#             pass
 
-        time.sleep(1500) # 25 minute
+#         time.sleep(1500) # 25 minute
 
-th = threading.Thread(target=my_task, daemon=True)
-th.start()
+# th = threading.Thread(target=my_task, daemon=True)
+# th.start()
 
-th = threading.Thread(target=visit_homepage, daemon=True)
-th.start()
+# th = threading.Thread(target=visit_homepage, daemon=True)
+# th.start()
 
 # th = threading.Thread(target=queue_process, daemon=True)
 # th.start()
